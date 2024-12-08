@@ -16,6 +16,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
+    - name: Clear Cache
+      run: npm cache clean --force
     - name: Install Dependencies
       run: npm install
     - name: Execute Integration Tests
